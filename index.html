@@ -1,0 +1,123 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17223b"><meta name="description" content="찬양 가사를 정리하고 예배용 PPT를 제작하는 웹앱">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="icon-192.png"><title>찬양 가사 PPT 제작</title><style>
+:root{--ink:#20242c;--muted:#687080;--line:#dfe3ea;--accent:#4f46e5;--bg:#f5f6fa}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif;line-height:1.5}header{background:#171923;color:white;padding:26px max(18px,calc((100% - 1100px)/2)) 22px}h1{margin:0 0 6px;font-size:clamp(22px,4vw,30px)}header p{margin:0;color:#d4d7e1}main{max-width:1100px;margin:auto;padding:18px;display:grid;gap:16px}section{background:white;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 3px 14px #1b25400a}h2{font-size:18px;margin:0 0 12px}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}input,textarea,select{font:inherit;border:1px solid #cbd1dc;border-radius:9px;padding:10px;background:white;color:var(--ink)}input[type=text]{flex:1;min-width:190px}textarea{width:100%;min-height:230px;line-height:1.7;resize:vertical}button,.linkbtn{font:inherit;font-weight:650;border:0;border-radius:9px;padding:10px 13px;background:var(--accent);color:white;cursor:pointer;text-decoration:none;display:inline-block}button.secondary,.linkbtn.secondary{background:#eef0f6;color:#282d3a;border:1px solid #dfe3ea}button:disabled{opacity:.45;cursor:not-allowed}.hint{font-size:13px;color:var(--muted)}.searchlinks{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.status{font-size:13px;color:var(--muted);margin-top:8px}.editorgrid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:16px}.preview{background:#101116;color:white;aspect-ratio:16/9;border-radius:10px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font-size:clamp(20px,3vw,36px);font-weight:700;white-space:pre-line;position:relative}.preview small{position:absolute;top:10px;right:12px;font-size:11px;color:#ddd}.settings{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:12px}.settings label{font-size:13px;color:var(--muted);display:grid;gap:5px}.settings input,.settings select{width:100%}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:10px;margin-top:12px}.card{border:1px solid var(--line);border-radius:12px;padding:10px;background:#fff}.card.active{border:2px solid var(--accent);padding:9px}.mini{background:#111;color:#fff;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;text-align:center;white-space:pre-line;padding:10px;font-size:14px;border-radius:5px;overflow:hidden}.card p{font-size:12px;color:var(--muted);margin:7px 0}.cardactions{display:flex;gap:5px;flex-wrap:wrap}.cardactions button{font-size:12px;padding:6px 8px}.foot{font-size:12px;color:var(--muted)}@media(max-width:760px){main{padding:10px}.editorgrid{grid-template-columns:1fr}section{padding:14px}.preview{font-size:26px}}
+
+:root{--ink:#17223b;--muted:#6e7890;--line:#e1e6f0;--accent:#6b5ce7;--bg:#f3f5fb}
+body{background:radial-gradient(ellipse at 10% 0%,#e9e8ff 0,transparent 35%),linear-gradient(135deg,#f4f6fb,#eef1f8);font-family:Inter,"Noto Sans KR","Malgun Gothic",system-ui,sans-serif}
+header{position:relative;overflow:hidden;background:linear-gradient(115deg,#17223b,#343b65 62%,#875f9d);padding-top:30px;padding-bottom:28px}
+header:after{content:"✦";position:absolute;right:8%;top:-38px;font-size:190px;line-height:1;color:#ffffff12;pointer-events:none}
+header h1{letter-spacing:-.045em;font-size:clamp(25px,4vw,36px)}header p{max-width:700px;color:#e5e8f4}
+main{max-width:1200px;gap:18px;padding-top:22px}section{border-color:#e1e5ef;border-radius:18px;box-shadow:0 10px 32px #2734560c;padding:20px}
+h2{letter-spacing:-.025em;font-size:19px}button,.linkbtn{transition:transform .15s,box-shadow .15s,filter .15s;border-radius:11px}
+button:hover,.linkbtn:hover{filter:brightness(1.03);transform:translateY(-1px);box-shadow:0 5px 14px #28335b16}
+button:not(.secondary),#exportBtn{background:linear-gradient(110deg,#6558e8,#9b5bd5)}
+button.secondary,.linkbtn.secondary{background:#f4f5fb;border-color:#e2e5f0;color:#293654}
+input,textarea,select{border-color:#dce2ee;border-radius:11px}input:focus,textarea:focus,select:focus{outline:3px solid #7d74ec2e;border-color:#8579ef}
+.preview{border:1px solid #252c43;box-shadow:inset 0 0 0 1px #ffffff10;border-radius:14px}.card{border-color:#e0e5f0;border-radius:13px;box-shadow:0 3px 10px #24345a08}.card.active{border-color:#7967ee;background:#faf9ff}.mini{border-radius:8px}.hint,.foot{line-height:1.65}#loadFontsBtn{align-self:end}
+@media(max-width:760px){header{padding:24px 16px 20px}main{padding:10px;gap:12px}section{padding:14px;border-radius:14px}header:after{right:-25px;font-size:120px}}
+
+/* Worship studio visual refresh */
+:root{--ink:#202642;--muted:#747c96;--line:#e5e6f2;--accent:#6c5ce7;--bg:#f5f4fb;--gold:#e9c77b}
+body{background:radial-gradient(ellipse at 85% 0%,#e9e2ff 0,transparent 28%),linear-gradient(180deg,#f6f5fc 0%,#f1f3fa 100%);color:var(--ink)}
+header{background:linear-gradient(120deg,#151d38 0%,#292c54 58%,#66518a 100%);padding-top:32px;padding-bottom:32px;border-bottom:3px solid #d8b96c}
+header h1{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.055em;text-shadow:0 2px 16px #090d2440}
+header h1:first-letter{color:var(--gold)}
+main{padding-top:24px;padding-bottom:36px;gap:20px}
+section{position:relative;border:1px solid #e4e4f1;border-radius:20px;padding:23px;background:linear-gradient(145deg,#fff 0%,#fdfcff 100%);box-shadow:0 12px 34px #26264b0c}
+section:before{content:"";position:absolute;top:0;left:24px;right:24px;height:3px;border-radius:0 0 4px 4px;background:linear-gradient(90deg,#6c5ce7,#b49ae8,#e9c77b);opacity:.85}
+section h2{display:flex;align-items:center;gap:10px;color:#252b4b;font-size:19px;font-weight:800;letter-spacing:-.035em;margin:2px 0 17px}
+section h2:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,#e4e2f3,transparent)}
+input,textarea,select{background:#fcfcff;border-color:#dfe2f0;color:#242944;box-shadow:inset 0 1px 2px #26264b05}
+input::placeholder,textarea::placeholder{color:#9ba1b5}
+textarea{line-height:1.85}
+button,.linkbtn{background:linear-gradient(115deg,#5c52d9,#8563d8);box-shadow:0 4px 10px #6458d51c;font-weight:700}
+button.secondary,.linkbtn.secondary{background:#f3f2fc;border:1px solid #e2def6;color:#45416e;box-shadow:none}
+#searchBtn{min-width:82px;background:linear-gradient(120deg,#5c52d9,#9870d9)}
+#makeBtn{background:linear-gradient(115deg,#252d50,#424b78)}
+#exportBtn{background:linear-gradient(115deg,#a78036,#d1a955);color:#201b10;box-shadow:0 5px 14px #c5a04b2b}
+#lyrics{background:linear-gradient(180deg,#fdfdff,#fafaff)}
+.editorgrid{gap:18px}
+#bigPreview{background:#10162c;border:1px solid #30395c;box-shadow:0 12px 26px #141a3326,inset 0 0 0 1px #ffffff12;border-radius:16px}
+.settings{padding:14px;background:#f6f5fd;border:1px solid #e8e5f6;border-radius:14px;align-items:end}
+.settings label{color:#626b87;font-weight:650}
+#loadFontsBtn{font-size:13px;min-height:42px;white-space:normal}
+#cards{gap:12px}
+.card{padding:11px;border-radius:14px;background:#fff;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 20px #26264b12}
+.card.active{background:#f9f7ff;border:2px solid #8273e9;box-shadow:0 0 0 3px #8273e91a}
+.mini{background:#151a30;border:1px solid #303650}
+.cardactions button{min-width:34px}
+.status{padding:9px 11px;border-radius:9px;background:#f5f4fc;color:#5c6280}
+.hint{color:#7b829a}
+@media(max-width:760px){header{padding:24px 16px 23px}section{padding:17px}section:before{left:17px;right:17px}.settings{padding:10px}.editorgrid{gap:14px}#loadFontsBtn{width:100%}}
+
+
+/* Scenic worship-inspired design matching the reference concept */
+body{background:#f0f2f7;color:#172033}
+header{min-height:130px;display:flex;align-items:center;gap:22px;position:relative;isolation:isolate;overflow:hidden;padding:24px max(24px,calc((100% - 1480px)/2));border:0;border-bottom:1px solid #d9d7d2;background:linear-gradient(90deg,rgba(25,31,54,.52),rgba(50,49,71,.18) 52%,rgba(255,232,204,.16)),linear-gradient(180deg,#9ba6bd 0%,#d7b5aa 48%,#4c536a 78%,#252c42 100%)}
+header:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 76% 22%,#fff1d8 0,rgba(255,231,199,.72) 12%,transparent 34%),linear-gradient(174deg,transparent 48%,#4a526b 49%,#343b54 64%,#20283d 65%)}
+header:after{content:"";position:absolute;z-index:-1;inset:0;top:auto;right:auto;font-size:0;pointer-events:none;background:linear-gradient(180deg,transparent 50%,rgba(15,22,39,.36)),radial-gradient(ellipse at 20% 90%,#293148 0,transparent 44%);width:100%;height:100%}
+.brandmark{width:66px;height:78px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:72px;font-weight:300;line-height:1;text-shadow:0 2px 12px #17203955;flex-shrink:0}
+.brandcopy{position:relative;z-index:1}.brandcopy h1{font-size:clamp(27px,3.5vw,43px);margin:0;color:#fff;font-weight:850;letter-spacing:-.055em;text-shadow:0 2px 12px #17203955}.brandcopy p{margin:0;color:#fff;font-size:14px;letter-spacing:.15em}
+.tagline{margin-left:auto;align-self:center;text-align:center;color:#9c654d;font-family:"Noto Serif KR","Batang",serif;font-size:clamp(17px,2vw,24px);font-style:italic;line-height:1.45;letter-spacing:.05em;border-bottom:1px solid #fff8e9;padding:0 12px 7px;transform:rotate(-3deg)}
+main{max-width:1480px;grid-template-columns:minmax(280px,.82fr) minmax(0,1.65fr);align-items:start;gap:12px;padding:14px 16px 24px}
+main>section{padding:18px;border-radius:14px;border:1px solid #e0e5ef;background:linear-gradient(145deg,#fff,#fbfcff);box-shadow:0 5px 18px #1c29410b}
+main>section:before{display:none}main>section:nth-child(1){grid-column:1;grid-row:1}main>section:nth-child(2){grid-column:2;grid-row:1}main>section:nth-child(3){grid-column:1 / -1;grid-row:2}
+section h2{margin:0 0 14px;font-size:19px;color:#18243c;letter-spacing:-.035em}section h2:after{display:none}
+#songTitle,#artist{min-width:0;width:100%;flex:1 1 100%;max-width:none!important}
+#searchBtn{width:100%;min-height:48px;background:linear-gradient(105deg,#8654e8,#d65d9d 70%,#ff9564);font-size:17px}
+.searchlinks{gap:8px}#searchLinks .linkbtn{font-size:13px;padding:9px 10px}
+#lyrics{min-height:212px;background:#fff;line-height:1.65}#makeBtn{background:linear-gradient(110deg,#259b70,#31b47f)}#demoBtn,#clearBtn{font-size:13px}.hint{font-size:12px}
+.editorgrid{grid-template-columns:minmax(0,1.45fr) minmax(260px,.8fr);gap:14px}
+#bigPreview{border-radius:10px;aspect-ratio:16/9;background:#151b2e;border:1px solid #3a4259;box-shadow:inset 0 0 0 1px #ffffff12}
+.settings{background:#f6f7fb;border:1px solid #e3e7f0;border-radius:12px;padding:12px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+#loadFontsBtn{font-size:12px;min-height:38px}#exportBtn{background:linear-gradient(110deg,#2e9d72,#23aa7b);color:white}
+.cards{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}.card{box-shadow:none;border-radius:9px}.mini{background:#f8f8fb!important;color:#151a26!important;border:1px solid #dce1eb;border-radius:7px}.card.active{background:#f8f4ff;border-color:#8b5cf6}.cardactions{justify-content:space-between}.cardactions button{padding:5px 7px;min-width:28px}
+.status{background:#f3f5fb;border:1px solid #e3e7f0}
+@media(max-width:900px){main{grid-template-columns:1fr}main>section:nth-child(1),main>section:nth-child(2),main>section:nth-child(3){grid-column:1;grid-row:auto}.editorgrid{grid-template-columns:1fr}.tagline{font-size:16px}}
+@media(max-width:560px){header{padding:20px 14px;gap:10px;min-height:100px}.brandmark{width:42px;height:56px;font-size:52px}.brandcopy h1{font-size:24px}.brandcopy p{font-size:9px;letter-spacing:.1em}.tagline{font-size:12px;padding:0 3px 4px}main{padding:10px}main>section{padding:14px}}
+</style></head><body><header><div class="brandmark" aria-hidden="true">✝</div><div class="brandcopy"><h1>찬양 가사 PPT 제작</h1><p>WORSHIP LYRICS PPT MAKER</p></div><div class="tagline">찬양이<br>삶이 되는 시간</div></header><main>
+<section><h2>1. 찬양 찾기</h2><div class="row"><input id="songTitle" type="text" placeholder="찬양 제목 입력 (예: 내 기쁨 되신 주)"><input id="artist" type="text" placeholder="가수 / 팀 (선택)" style="max-width:230px"><button id="searchBtn">검색</button></div><div class="searchlinks" id="searchLinks"></div></section>
+<section><h2>2. 가사 입력 및 슬라이드 만들기</h2><textarea id="lyrics" placeholder="확인한 가사를 여기에 붙여 넣으세요.&#10;&#10;빈 줄로 절/후렴 등 구간을 구분하면 구간 구분을 유지하기 쉽습니다."></textarea><div class="row" style="margin-top:10px"><button id="makeBtn">가사로 슬라이드 만들기</button><button class="secondary" id="demoBtn">예시 형식 보기</button><button class="secondary" id="clearBtn">가사 지우기</button></div><p class="hint">자동 분할은 입력된 가사를 기준으로 처리합니다. 가사 내용이나 구절 순서를 임의로 추측하지 않으며, 결과를 미리보기에서 직접 수정할 수 있습니다.</p></section>
+<section><h2>3. 슬라이드 미리보기 및 편집</h2><div class="editorgrid"><div><div class="preview" id="bigPreview"><span>가사를 입력하고<br>슬라이드를 만들어 주세요</span></div><div class="row" style="margin-top:10px"><button class="secondary" id="prevBtn">← 이전</button><span id="count" class="hint">0 / 0</span><button class="secondary" id="nextBtn">다음 →</button><button class="secondary" id="duplicateBtn">현재 슬라이드 복제</button><button class="secondary" id="deleteBtn">현재 슬라이드 삭제</button></div><label class="hint" for="slideText" style="display:block;margin:12px 0 5px">현재 슬라이드 가사 (직접 수정 가능)</label><textarea id="slideText" style="min-height:90px" placeholder="슬라이드를 선택하면 가사가 표시됩니다."></textarea><button id="applyTextBtn" class="secondary" style="margin-top:7px">수정 내용 적용</button></div><div><h3 style="margin:0 0 8px;font-size:15px">디자인 설정</h3><div class="settings"><label>가사 글자 크기(pt)<input id="fontSize" type="number" min="18" max="72" value="38"></label><label>글꼴<select id="font"><option>맑은 고딕</option><option>Noto Sans KR</option><option>Arial</option><option>나눔고딕</option><option>Malgun Gothic</option></select></label><button type="button" class="secondary" id="loadFontsBtn">내 컴퓨터 글꼴 모두 불러오기</button><label>배경 색상<input id="bgColor" type="color" value="#000000"></label><label>가사 색상<input id="textColor" type="color" value="#ffffff"></label><label>제목 표시<input id="showTitle" type="checkbox" checked></label><label>곡 제목 크기(pt)<input id="titleSize" type="number" min="8" max="24" value="12"></label></div><div class="row" style="margin-top:12px"><button id="exportBtn">PowerPoint(.pptx) 다운로드</button></div><p class="hint">PPTX 저장 시 인터넷 연결이 필요합니다(라이브러리 로드).</p></div></div><h3 style="font-size:15px;margin:18px 0 5px">전체 슬라이드 — 선택 후 순서 이동</h3><p class="hint">각 슬라이드의 ↑ ↓ 버튼으로 순서를 바꾸고, 복제/삭제할 수 있습니다.</p><div id="cards" class="cards"></div><div class="status" id="status"></div></section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script><script>
+const $=id=>document.getElementById(id);let slides=[],idx=0;let lyricDb=null;function norm(s){return (s||'').toLocaleLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\p{L}\p{N}]+/gu,' ').trim()}async function search(){
+ const t=$('songTitle').value.trim(), a=$('artist').value.trim();
+ if(!t){setStatus('찬양 제목을 먼저 입력해 주세요.',true);return}
+ const query=(t+' '+a).trim();
+ const urls=[
+  ['네이버 VIBE에서 검색','https://vibe.naver.com/search?query='+encodeURIComponent(query)],
+  ['YouTube에서 검색','https://www.youtube.com/results?search_query='+encodeURIComponent(query+' 찬양')],
+  ['네이버에서 가사 검색','https://search.naver.com/search.naver?query='+encodeURIComponent(query+' 가사')]
+ ];
+ $('searchLinks').innerHTML=urls.map(([label,url])=>'<a class="linkbtn secondary" target="_blank" rel="noopener noreferrer" href="'+url+'">'+label+' ↗</a>').join('');
+ const popup=window.open(urls[0][1],'_blank');
+ setStatus(popup?'네이버 VIBE 검색 창을 열었습니다. 곡을 확인한 뒤 가사를 복사해 입력란에 붙여 넣어 주세요.':'팝업이 차단되었습니다. 아래 네이버 VIBE 검색 링크를 눌러 주세요.');
+}
+$('searchBtn').onclick=search;
+$('songTitle').addEventListener('keydown',e=>{if(e.key==='Enter')search()});
+$('artist').addEventListener('keydown',e=>{if(e.key==='Enter')search()});
+async function loadLocalFonts(){
+ const btn=$('loadFontsBtn');btn.disabled=true;btn.textContent='글꼴 목록 불러오는 중…';
+ try{
+  if(!('queryLocalFonts' in window)){setStatus('이 브라우저에서는 컴퓨터 글꼴 자동 목록 기능을 지원하지 않습니다. 최신 Chrome에서 열어 주세요.',true);return}
+  const fonts=await window.queryLocalFonts();
+  const names=[...new Set(fonts.map(f=>f.family).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ko'));
+  if(!names.length){setStatus('불러온 글꼴이 없습니다.',true);return}
+  const select=$('font'),current=select.value;select.innerHTML='';
+  names.forEach(name=>{const opt=document.createElement('option');opt.value=name;opt.textContent=name;select.appendChild(opt)});
+  if(names.includes(current))select.value=current;
+  setStatus('컴퓨터에서 '+names.length+'개 글꼴을 불러왔습니다. 다른 기기에서는 해당 글꼴이 설치되어 있어야 동일하게 표시됩니다.');
+  applyStyle();renderCards();
+ }catch(e){setStatus('글꼴 접근 권한이 없거나 불러오기에 실패했습니다. 브라우저의 글꼴 접근 권한 요청을 허용해 주세요.',true)}
+ finally{btn.disabled=false;btn.textContent='내 컴퓨터 글꼴 모두 불러오기'}
+}
+$('loadFontsBtn').onclick=loadLocalFonts;
+function splitLyrics(raw){const paragraphs=raw.replace(/\r/g,'').split(/\n\s*\n/).map(s=>s.trim()).filter(Boolean);let out=[];for(const para of paragraphs){for(let line of para.split('\n').map(s=>s.trim()).filter(Boolean)){line=line.replace(/^[•·\-–—]+\s*/,'').trim();if(!line)continue;let words=line.split(/\s+/),cur='';for(const w of words){if(!cur)cur=w;else if((cur+' '+w).length<=22)cur+=' '+w;else{out.push(cur);cur=w}}if(cur)out.push(cur)}}let result=[];for(let i=0;i<out.length;i+=2)result.push({text:out.slice(i,i+2).join('\n')});return result}
+function make(){const raw=$('lyrics').value.trim();if(!raw){setStatus('먼저 가사를 입력해 주세요.',true);return}slides=splitLyrics(raw);idx=0;render();setStatus(`${slides.length}개 슬라이드를 만들었습니다. 구절 흐름을 확인하고 필요하면 순서를 조정하세요.`)}function setStatus(s,err=false){$('status').textContent=s;$('status').style.color=err?'#b42318':''}function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function render(){if(idx>=slides.length)idx=slides.length-1;if(idx<0)idx=0;const s=slides[idx];$('count').textContent=slides.length?`${idx+1} / ${slides.length}`:'0 / 0';$('slideText').value=s?s.text:'';$('bigPreview').innerHTML=s?`<small>${$('showTitle').checked?escapeHtml($('songTitle').value.trim()):''}</small><div>${escapeHtml(s.text)}</div>`:'<span>가사를 입력하고<br>슬라이드를 만들어 주세요</span>';applyStyle();renderCards();['prevBtn','nextBtn','duplicateBtn','deleteBtn','applyTextBtn'].forEach(id=>$(id).disabled=!slides.length)}function applyStyle(){$('bigPreview').style.background=$('bgColor').value;$('bigPreview').style.color=$('textColor').value;$('bigPreview').style.fontFamily=$('font').value;$('bigPreview').style.fontSize=Math.min(72,Math.max(18,+$('fontSize').value||38))+'px';const sm=$('bigPreview').querySelector('small');if(sm)sm.style.fontSize=($('titleSize').value||12)+'px'}function renderCards(){$('cards').innerHTML='';slides.forEach((s,i)=>{const d=document.createElement('div');d.className='card'+(i===idx?' active':'');const m=document.createElement('div');m.className='mini';m.textContent=s.text;m.style.background=$('bgColor').value;m.style.color=$('textColor').value;m.style.fontFamily=$('font').value;const p=document.createElement('p');p.textContent=`슬라이드 ${i+1}`;const ac=document.createElement('div');ac.className='cardactions';const actions=[['선택',()=>{idx=i;render()}],['↑',()=>move(i,-1)],['↓',()=>move(i,1)],['복제',()=>{slides.splice(i+1,0,{...s});idx=i+1;render()}],['삭제',()=>{slides.splice(i,1);idx=Math.min(idx,slides.length-1);render()}]];actions.forEach(([label,fn])=>{const b=document.createElement('button');b.textContent=label;b.className='secondary';b.onclick=fn;ac.appendChild(b)});d.append(m,p,ac);$('cards').appendChild(d)})}function move(i,dir){const j=i+dir;if(j<0||j>=slides.length)return;[slides[i],slides[j]]=[slides[j],slides[i]];idx=j;render()}
+$('makeBtn').onclick=make;$('demoBtn').onclick=()=>{$('lyrics').value='첫째 줄에 들어갈 예시 가사\n이어지는 예시 문장\n\n다음 구간의 예시 가사\n함께 부를 다음 문장';setStatus('예시 문구입니다. 실제 가사가 아닌 형식 확인용 문구입니다.')};$('clearBtn').onclick=()=>{$('lyrics').value='';setStatus('가사 입력란을 비웠습니다.')};$('prevBtn').onclick=()=>{idx=Math.max(0,idx-1);render()};$('nextBtn').onclick=()=>{idx=Math.min(slides.length-1,idx+1);render()};$('duplicateBtn').onclick=()=>{if(slides[idx]){slides.splice(idx+1,0,{...slides[idx]});idx++;render()}};$('deleteBtn').onclick=()=>{if(slides[idx]){slides.splice(idx,1);idx=Math.min(idx,slides.length-1);render()}};$('applyTextBtn').onclick=()=>{if(slides[idx]){slides[idx].text=$('slideText').value.trim();render()}};['fontSize','font','bgColor','textColor','showTitle','titleSize'].forEach(id=>$(id).addEventListener('input',()=>{applyStyle();renderCards();if(slides.length)render()}));
+$('exportBtn').onclick=async()=>{if(!slides.length){setStatus('먼저 슬라이드를 만들어 주세요.',true);return}if(typeof pptxgen==='undefined'){setStatus('PowerPoint 생성 도구를 불러오지 못했습니다. 인터넷 연결을 확인하세요.',true);return}try{const pptx=new pptxgen();pptx.layout='LAYOUT_WIDE';pptx.author='찬양 가사 PPT 만들기';pptx.subject='예배용 찬양 가사 슬라이드';pptx.title=$('songTitle').value.trim()||'찬양 가사';pptx.lang='ko-KR';for(const s of slides){const sl=pptx.addSlide();sl.background={color:$('bgColor').value.slice(1).toUpperCase()};if($('showTitle').checked&&$('songTitle').value.trim())sl.addText($('songTitle').value.trim(),{x:9.3,y:.18,w:3.5,h:.35,fontFace:$('font').value,fontSize:+$('titleSize').value||12,color:$('textColor').value.slice(1).toUpperCase(),align:'right',margin:0});sl.addText(s.text,{x:.45,y:.55,w:12.43,h:6.3,fontFace:$('font').value,fontSize:+$('fontSize').value||38,bold:true,color:$('textColor').value.slice(1).toUpperCase(),align:'center',valign:'mid',fit:'shrink',margin:.12,paraSpaceAfterPt:8})}await pptx.writeFile({fileName:($('songTitle').value.trim()||'찬양_가사')+'_가사PPT.pptx'});setStatus('PPTX 파일을 다운로드했습니다.')}catch(e){setStatus('PPT 생성 중 오류: '+e.message,true)}};render();
+</script><script>if('serviceWorker' in navigator && (location.protocol==='https:'||location.hostname==='localhost')){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}</script></body></html>
